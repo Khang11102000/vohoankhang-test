@@ -1,9 +1,19 @@
-# Welcome to HLS interview!!
+# Author: Vo Ho An Khang
+# Exam for Frontend Intern
+Language used: Javascript
+IDE: VS Code
+Framework: ReactJS
+Version Node: 18.14.0
 
-## Assignment role
+How to run
 
-Select your assignment based on your role or position
+Algorithm
+- Open [Algorithm](./algorithm/algorithm.js).
+- Use command "node algorithm.js".
 
-- [Mobile](./mobile)
-- [Algorithm](./algorithm)
-- [Front end/Back end](./frontend)
+Frontend Test
+- Open [Front end/Back end](./frontend).
+- Use command "npm install" to install all packages.
+- Use command "npm start".
+
+

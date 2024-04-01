@@ -16,11 +16,20 @@ The child ran back to his father and said, "You lied to me!" His father replied,
 ];
 function JokePage() {
   const [jokeDisplayed, setJokeDisplay] = useState(0);
+  const [trigger, setTrigger] = useState(false);
   const cookies = new Cookies();
 
   useEffect(() => {
-    console.log(jokeDisplayed, cookies.get(jokeDisplayed))
-  }, [jokeDisplayed])
+    const temp = cookies.get("joke");
+    if (temp) {
+      setJokeDisplay(() => temp);
+    }
+  }, []);
+  useEffect(() => {
+    if (jokeDisplayed >= jokes.length) {
+      setTrigger(true);
+    }
+  }, [jokeDisplayed]);
 
   return (
     <div className="joke-page-container">
@@ -49,21 +58,18 @@ function JokePage() {
       </div>
       <div className="joke-page-content">
         <div className="text-paragraph">
-          A child asked his father, "How were people born?" So his father said,
-          "Adam and Eve made babies, then their babies became adults and made
-          babies, and so on." The child then went to his mother, asked her the
-          same question and she told him, "We were monkeys then we evolved to
-          become like we are now." The child ran back to his father and said,
-          "You lied to me!" His father replied, "No, your mom was talking about
-          her side of the family."
+          {trigger
+            ? `"That's all the jokes for today! Come back another day!"`
+            : jokes[jokeDisplayed]}
         </div>
         <div className="button-layout">
           <button
             className="j-button"
             style={{ backgroundColor: "#2C7EDB" }}
             onClick={() => {
-              cookies.set(jokeDisplayed, "This is Funny!");
-              setJokeDisplay(() => jokeDisplayed + 1);
+              cookies.set("joke", jokeDisplayed + 1);
+
+              setJokeDisplay(jokeDisplayed + 1);
             }}
           >
             This is Funny!
@@ -72,8 +78,8 @@ function JokePage() {
             className="j-button"
             style={{ backgroundColor: "#29B363" }}
             onClick={() => {
-              cookies.set(jokeDisplayed, "This is not funny");
-              setJokeDisplay(() => jokeDisplayed + 1);
+              cookies.set("joke", jokeDisplayed + 1);
+              setJokeDisplay(jokeDisplayed + 1);
             }}
           >
             This is not funny
@@ -85,7 +91,12 @@ function JokePage() {
           className="text-paragraph"
           style={{ borderBottom: "none", fontSize: "15px" }}
         >
-          {jokes[jokeDisplayed]}
+          This website is created as part of Hlsolutions program. The material
+          contained on this website are provided for general infomation only and
+          do not constitute any form of advice. HLS assumes no responsibility
+          for the accuracy of any particular statement and accepts no liability
+          for any loss or damage which may arise from reliance on the infomation
+          contained on this site
         </div>
         <div>Copyright 2021 HLS</div>
       </div>
