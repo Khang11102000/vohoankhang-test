@@ -1,9 +1,11 @@
 # Author: Vo Ho An Khang
 # Exam for Frontend Intern
-Language used: Javascript
-IDE: VS Code
-Framework: ReactJS
-Version Node: 18.14.0
+
+Environment
+- Language used: Javascript
+- IDE: VS Code
+- Framework: ReactJS
+- Version Node: 18.14.0
 
 How to run
 
