@@ -14,7 +14,8 @@ Algorithm
 - Use command "node algorithm.js".
 
 Frontend Test
-- Open [Front end/Back end](./frontend).
+- Open [Front end](./frontend/frontend-test).
+- Open terminal
 - Use command "npm install" to install all packages.
 - Use command "npm start".
 
