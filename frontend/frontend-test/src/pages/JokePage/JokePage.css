@@ -1,0 +1,73 @@
+.joke-page-container {
+  height: inherit;
+  width: inherit;
+}
+.joke-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+}
+.avatar {
+  display: flex;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 20px;
+}
+.joke-page-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+  width: 100%;
+  background-color: #29b363;
+}
+.joke-page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  width: 100%;
+}
+.text-paragraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 280px;
+  max-width: 100vw;
+  opacity: 0.7;
+  font-size: 18px;
+  line-height: 28px;
+  border-bottom: 1px solid #c7c7c7;
+}
+.button-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 1000px;
+  height: 120px;
+  max-width: 100vw;
+}
+.j-button {
+  height: 50px;
+  width: 320px;
+  font-size: 16px;
+  color: #fff;
+  border-color: white;
+}
+.joke-page-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #c7c7c7;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 770px);
+  width: 100%;
+}
